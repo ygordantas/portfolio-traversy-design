@@ -1,5 +1,6 @@
 @import "variables";
 @import "menu";
+@import "buttons";
 
 * {
   box-sizing: border-box;
@@ -97,6 +98,46 @@ main {
     background: lighten($color: $primary-color, $amount: 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+  }
+}
+//Portfolio
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+  img {
+    width: 100%;
+    border: 3px solid #fff;
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easyOut();
+    }
+  }
+}
+
+// Contact Page
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+  div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easyOut;
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      span{
+      color: set-text-color($secondary-color);
+
+      }
+    }
   }
 }
 #main-footer {
